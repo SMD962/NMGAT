@@ -1,0 +1,16 @@
+{
+  "hidden_dim": 64,
+  "heads": 2,
+  "dropout": 0.2,
+  "concat": false,
+  "norm": "layer_norm",
+  "radius": 1,
+  "base_seed": 2026013000,
+  "num_seeds": 200,
+  "graph": "small",
+  "protocol": "pretrained",
+  "variant_trim_ratios": {
+    "A": 0.0,
+    "B": 0.05
+  }
+}

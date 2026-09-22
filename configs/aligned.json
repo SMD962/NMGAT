@@ -1,0 +1,28 @@
+{
+  "epochs": 12000,
+  "eval_every": 10,
+  "lr": 0.001,
+  "weight_decay": 0.001,
+  "grad_clip": 2.0,
+  "loss": "huber",
+  "huber_delta": 0.38,
+  "hidden_dim": 64,
+  "heads": 2,
+  "dropout": 0.2,
+  "concat": false,
+  "norm": "layer_norm",
+  "ema_start_epoch": 6000,
+  "ema_decay": 0.9995,
+  "feature_noise_std": 0.35,
+  "feature_noise_prob": 1.0,
+  "radius": 1,
+  "noise_scope": "train",
+  "base_seed": 2026013000,
+  "num_seeds": 200,
+  "protocol": "aligned",
+  "graph": "small",
+  "variant_trim_ratios": {
+    "A": 0.0,
+    "B": 0.05
+  }
+}
