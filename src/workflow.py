@@ -1,7 +1,6 @@
 """Configuration loading and command-line workflows for NMGAT."""
 import argparse
 import hashlib
-import importlib
 import importlib.metadata
 import json
 from pathlib import Path
@@ -45,7 +44,7 @@ def validate_inputs(folder):
     return frames
 
 
-ROOT = Path(__file__).resolve().parents[2]
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def expand_graph(module, cfg, data, path):
@@ -92,13 +91,13 @@ def load_experiment(config_path=None, output=None, device='cpu', epochs=None,
                     *, model='WS4', variant='A', graph=None, global_features=None):
     path = Path(config_path or ROOT/'configs/aligned.json').resolve()
     settings = json.loads(path.read_text(encoding='utf8'))
-    root = next((p for p in path.parents if (p/'pyproject.toml').exists()), ROOT)
+    root = next((p for p in path.parents if (p/'configs/aligned.json').is_file()), ROOT)
     aligned = settings.get('protocol') in ('aligned', 'pretrained')
     if aligned:
         settings.update(name=f'{model}-{variant}',model=model,variant=variant,
                         data_path=f'data/processed/{model}',
                         uncertainty_trim_ratio=settings['variant_trim_ratios'][variant])
-    module = importlib.import_module('nmgat.training')
+    from . import training as module
     data_path = root / settings['data_path']
     validate_inputs(data_path)
     accepted = module.TrainConfig.__dataclass_fields__

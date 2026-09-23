@@ -7,12 +7,12 @@ A/B 共用模型和训练循环；图选项决定输入节点，A/B 选项只决
 
 | File | Responsibility / 职责 |
 |---|---|
-| `src/nmgat/constants.py` | Fixed 17-feature order / 固定特征顺序 |
-| `src/nmgat/features.py` | Physical feature formulas / 物理特征公式 |
-| `src/nmgat/data.py` | Prepared data, graph edges, masks, standardization / 数据、连边、掩码与标准化 |
-| `src/nmgat/model.py` | Stem → two GATv2 layers → residual head / 网络结构 |
-| `src/nmgat/training.py` | Shared optimizer, noise, EMA and training loop / 统一训练实现 |
-| `src/nmgat/workflow.py` | Configuration, validation, training/prediction commands / 配置与运行流程 |
+| `src/constants.py` | Fixed 17-feature order / 固定特征顺序 |
+| `src/features.py` | Physical feature formulas / 物理特征公式 |
+| `src/data.py` | Prepared data, graph edges, masks, standardization / 数据、连边、掩码与标准化 |
+| `src/model.py` | Stem → two GATv2 layers → residual head / 网络结构 |
+| `src/training.py` | Shared optimizer, noise, EMA and training loop / 统一训练实现 |
+| `src/workflow.py` | Configuration, validation, training/prediction commands / 配置与运行流程 |
 | `scripts/reproduce.py` | Replay supplied 200-seed ensembles / 复算已有权重的集成结果 |
 | `scripts/train.py` | Thin training entry point / 训练入口 |
 | `scripts/predict.py` | Thin inference entry point / 预测入口 |

@@ -9,8 +9,8 @@ import pandas as pd
 import torch
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0,str(ROOT/'src'))
-from nmgat.workflow import load_experiment, predict_checkpoint
+sys.path.insert(0,str(ROOT))
+from src.workflow import load_experiment, predict_checkpoint
 
 
 def main():

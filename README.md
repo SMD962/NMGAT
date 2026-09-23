@@ -76,11 +76,11 @@ Values are in MeV for the 23 test nuclides in setting A. Result reproduction use
 ```text
 configs/       Training settings
 data/          Datasets and prediction tables
-src/nmgat/     Data processing, model, and training
+src/     Data processing, model, and training
 scripts/       Training, prediction, and reproduction commands
 results/       Reference results
 tests/         Data and code checks
 docs/          Additional documentation
 ```
 
-To change the model, start with `src/nmgat/model.py`. Training parameters live in `configs/aligned.json`. See the [code guide](docs/ARCHITECTURE.md), [data dictionary](docs/DATA_DICTIONARY.md), and [reproducibility notes](docs/REPRODUCIBILITY.md) for more details.
+To change the model, start with `src/model.py`. Training parameters live in `configs/aligned.json`. See the [code guide](docs/ARCHITECTURE.md), [data dictionary](docs/DATA_DICTIONARY.md), and [reproducibility notes](docs/REPRODUCIBILITY.md) for more details.

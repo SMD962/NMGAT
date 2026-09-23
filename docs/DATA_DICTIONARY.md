@@ -5,7 +5,7 @@ Binding energies, residuals, and experimental uncertainties are in MeV unless th
 column explicitly says keV. Binding energies use a positive-bound convention.
 
 The 17 input features are listed below. Their tensor order is defined in
-`src/nmgat/constants.py`.
+`src/constants.py`.
 
 | Field | Definition |
 |---|---|

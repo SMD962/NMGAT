@@ -1,16 +1,16 @@
 from pathlib import Path
 import sys
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import numpy as np
 import pandas as pd
 import unittest
 import tempfile
 import torch
 
-from nmgat.workflow import load_experiment, validate_inputs, FEATURES
-from nmgat.workflow import expand_graph
-from nmgat.features import build_features
+from src.workflow import load_experiment, validate_inputs, FEATURES
+from src.workflow import expand_graph
+from src.features import build_features
 
 ROOT = Path(__file__).resolve().parents[1]
 

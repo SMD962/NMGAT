@@ -76,11 +76,11 @@ python scripts/reproduce.py --checkpoints ../nmgat-checkpoints
 ```text
 configs/       训练配置
 data/          数据集与预测表
-src/nmgat/     数据处理、网络和训练实现
+src/     数据处理、网络和训练实现
 scripts/       训练、预测与结果复现入口
 results/       参考结果
 tests/         数据与代码检查
 docs/          补充说明
 ```
 
-想修改模型，可以从 `src/nmgat/model.py` 开始；训练参数在 `configs/aligned.json` 中。更多信息见[代码说明](docs/ARCHITECTURE.md)、[数据字段](docs/DATA_DICTIONARY.md)和[复现细节](docs/REPRODUCIBILITY.md)。
+想修改模型，可以从 `src/model.py` 开始；训练参数在 `configs/aligned.json` 中。更多信息见[代码说明](docs/ARCHITECTURE.md)、[数据字段](docs/DATA_DICTIONARY.md)和[复现细节](docs/REPRODUCIBILITY.md)。
